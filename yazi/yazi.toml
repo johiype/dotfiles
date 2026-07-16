@@ -1,0 +1,11 @@
+
+# This file belongs under ~/.config/yazi/yazi.toml on Linux and under %APPDATA%\yazi\config\yazi.toml on Windows
+
+[opener]
+edit = [
+	{ run = 'vim "$@"', block = true, for = "unix" },
+	{ run = 'vim %*', block = true, for = "windows" }
+]
+
+
+

@@ -1,0 +1,28 @@
+
+# This file belongs under ~/.config/yazi/keymap.toml on Linux and under %APPDATA%\yazi\config\keymap.toml on Windows
+
+[[mgr.prepend_keymap]]
+on   = "<C-o>"
+run  = "shell --orphan 'explorer .'"
+desc = "Ctrl + o : Open current directory in Windows Explorer"
+for = "windows"
+
+[[mgr.prepend_keymap]]
+on   = "<C-n>"
+run  = "create"
+desc = "Ctrl + n : Create new file or dir"
+for = "windows"
+
+[[mgr.prepend_keymap]]
+on   = "<F2>"
+run  = "rename"
+desc = "F2: Rename file or dir"
+for = "windows"
+
+
+
+
+#----------------------------------------------------
+# Docs:  https://yazi-rs.github.io/docs/configuration/keymap/
+
+
