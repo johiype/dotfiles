@@ -14,6 +14,9 @@ let g:solarized_termtrans=1
 " Lines
 set number
 
+" show file name on bottom
+set laststatus=2
+
 " Highlight current line
 set cursorline
 set cursorlineopt=number
@@ -21,7 +24,7 @@ set cursorlineopt=number
 " Highlight dynamically as pattern is typed
 set incsearch
 
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
