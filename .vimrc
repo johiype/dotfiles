@@ -4,12 +4,14 @@
 
 " I found many of the options from Mathias Bynens' GitHub repo: https://github.com/mathiasbynens/dotfiles/blob/main/.vimrc#L56
 
-
+" Add plugin for commenting capability
+packadd comment
 
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+
+"colorscheme solarized
+" let g:solarized_termtrans=1
 
 " Lines
 set number
