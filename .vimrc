@@ -7,7 +7,30 @@
 " Add plugin for commenting capability
 packadd comment
 
-" Use the Solarized Dark theme
+""""""""""" TRYING TO MAKE VIM TMUX CLIPBOARD WORK! LOOOL!! """"""""""""
+call plug#begin()
+" List your plugins here
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+call plug#end()
+
+nmap <leader>y <Plug>OSCYankOperator
+nmap <leader>y <leader>c_
+vmap <leader>y <Plug>OSCYankVisual
+
+
+" Plugin settings
+" let g:oscyank_term = 'default'
+" let g:oscyank_max_length = 0
+
+" " Autocmd to copy to OSC52 on yank
+" augroup oscyank_autocmd
+"     autocmd!
+"     autocmd TextYankPost * if v:event.operator ==# 'y' && v:event.regname ==# '' | execute 'OSCYankRegister "' | endif
+" augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 set background=dark
 
 "colorscheme solarized
@@ -58,10 +81,8 @@ highlight Search ctermbg=242 ctermfg=15 guibg=#6c6c6c guifg=#ffffff
 
 "--------------------------------------------------------
 
-
 " Syntax Highligthing
 syntax on
-
 
 " Ctrl+Backspace key to delete entire word backward
 inoremap <C-BS> <C-\><C-o>db
