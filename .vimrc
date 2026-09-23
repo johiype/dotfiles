@@ -11,6 +11,7 @@ packadd comment
 call plug#begin()
 " List your plugins here
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'folke/tokyonight.nvim', {lazy = false,priority = 1000,opts = {},}
 call plug#end()
 
 nmap <leader>y <Plug>OSCYankOperator
