@@ -1,14 +1,15 @@
 --- Install lazy plugin manager
 require("config.lazy")
 
+--- mason plugin - installed via lazy
 require("mason").setup()
 
+--- nvim-transmitter - installed via lazy
 require('nvim-treesitter').setup {
-  -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
   install_dir = vim.fn.stdpath('data') .. '/site'
 }
 
-require('nvim-treesitter').install { 'rust', 'javascript', 'zig', 'lua' }
+require('nvim-treesitter').install { 'rust', 'javascript', 'zig', 'lua', 'python' }
 
 vim.opt.clipboard = "unnamedplus"
 
@@ -30,9 +31,8 @@ vim.opt.title = true
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 
--- Colorscheme (commented out as in your original file)
--- vim.cmd("colorscheme solarized")
-vim.cmd[[colorscheme tokyonight]]
+--- Set color scheme from tokyonight plugin
+vim.cmd[[colorscheme tokyonight-moon]]
 
 -- Highlight search matches
 vim.api.nvim_set_hl(0, "CurSearch", { bg = "#ffaf00", fg = "#000000", ctermbg = 214, ctermfg = 16 })
