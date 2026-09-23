@@ -1,3 +1,15 @@
+--- Install lazy plugin manager
+require("config.lazy")
+
+require("mason").setup()
+
+require('nvim-treesitter').setup {
+  -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+  install_dir = vim.fn.stdpath('data') .. '/site'
+}
+
+require('nvim-treesitter').install { 'rust', 'javascript', 'zig', 'lua' }
+
 vim.opt.clipboard = "unnamedplus"
 
 -- Appearance & Basics
@@ -20,6 +32,7 @@ vim.opt.ignorecase = true
 
 -- Colorscheme (commented out as in your original file)
 -- vim.cmd("colorscheme solarized")
+vim.cmd[[colorscheme tokyonight]]
 
 -- Highlight search matches
 vim.api.nvim_set_hl(0, "CurSearch", { bg = "#ffaf00", fg = "#000000", ctermbg = 214, ctermfg = 16 })
@@ -34,3 +47,5 @@ vim.keymap.set('i', '<C-Delete>', '<C-o>dw', { noremap = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+
